@@ -1,0 +1,9 @@
+on early-boot
+    #add for zyitong safechip dev
+    chown system system /dev/a5SpiInHal
+    chmod 0666 /dev/a5SpiInHal
+
+service zyitong_device_hal_service /vendor/bin/hw/vendor.qti.zyitong.device@1.0-service
+    class hal
+    user system
+    group system

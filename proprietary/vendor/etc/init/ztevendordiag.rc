@@ -1,0 +1,4 @@
+service vendordiag /vendor/bin/vendordiag
+    class core
+    user root
+    group radio cache inet misc audio diag vendor_qti_diag bluetooth drmrpc mediadrm

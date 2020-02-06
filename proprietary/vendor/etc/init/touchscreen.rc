@@ -1,0 +1,23 @@
+
+# this init flow for touchscreen
+
+on boot
+# proc/touchscreen
+    chown system system /proc/touchscreen/wake_gesture
+    chmod 644 /proc/touchscreen/wake_gesture
+    chown system system /proc/touchscreen/smart_cover
+    chmod 644 /proc/touchscreen/smart_cover
+    chown system system proc/touchscreen/headset_state
+    chmod 644 proc/touchscreen/headset_state
+
+# add for touch self-test
+    chown system system /sys/devices/virtual/tsp_fw/touchscreen/tpd_test_cmd
+    chown system system /sys/devices/virtual/tsp_fw/touchscreen/tpd_test_filename
+    chown system system /sys/devices/virtual/tsp_fw/touchscreen/tpd_test_ini_file_path
+    chown system system /sys/devices/virtual/tsp_fw/touchscreen/tpd_test_save_file_path
+    chown system system /sys/devices/virtual/tsp_fw/touchscreen/tpd_test_save_file_name
+    chmod 0646 /sys/devices/virtual/tsp_fw/touchscreen/tpd_test_cmd
+    chmod 0646 /sys/devices/virtual/tsp_fw/touchscreen/tpd_test_filename
+    chmod 0646 /sys/devices/virtual/tsp_fw/touchscreen/tpd_test_ini_file_path
+    chmod 0646 /sys/devices/virtual/tsp_fw/touchscreen/tpd_test_save_file_path
+    chmod 0646 /sys/devices/virtual/tsp_fw/touchscreen/tpd_test_save_file_name

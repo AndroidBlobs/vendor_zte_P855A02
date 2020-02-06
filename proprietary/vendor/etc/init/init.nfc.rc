@@ -1,0 +1,7 @@
+
+on post-fs
+
+    # NFC
+    setprop ro.nfc.port "I2C"
+    chmod 0660 /dev/pn553
+    chown nfc system /dev/pn553
